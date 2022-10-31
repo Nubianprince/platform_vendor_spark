@@ -104,12 +104,14 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.theme_id=5 \
     ro.com.google.ime.system_lm_dir=/product/usr/share/ime/google/d3_lms
 
+ifneq ($(PIXEL_DEVICE), true)
 # Gboard side padding
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_port_l=4 \
     ro.com.google.ime.kb_pad_port_r=4 \
     ro.com.google.ime.kb_pad_land_l=64 \
     ro.com.google.ime.kb_pad_land_r=64
+endif
 
 # Include AOSP audio files
 #include vendor/spark/config/aosp_audio.mk
