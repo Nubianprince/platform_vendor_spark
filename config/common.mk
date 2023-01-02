@@ -339,3 +339,6 @@ GLOBAL_THINLTO := true
 USE_THINLTO_CACHE := true
 SKIP_ABI_CHECKS := true
 endif
+
+#pixel framework
+$(call inherit-product-if-exists, vendor/pixel-framework/config.mk)
