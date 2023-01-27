@@ -321,6 +321,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 endif
 
+# Quick Tap
+ifneq ($(TARGET_SUPPORTS_QUICK_TAP),false)
+PRODUCT_COPY_FILES += \
+    vendor/spark/prebuilt/common/etc/sysconfig/quick_tap.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/quick_tap.xml
+endif
+
 # Adaptive Charging
 ifeq ($(TARGET_SUPPORTS_ADAPTIVE_CHARGING),true)
 PRODUCT_COPY_FILES += \
@@ -341,4 +347,4 @@ SKIP_ABI_CHECKS := true
 endif
 
 #pixel framework
-$(call inherit-product-if-exists, vendor/pixel-framework/config.mk)
+$(call inherit-product, vendor/pixel-framework/config.mk)
