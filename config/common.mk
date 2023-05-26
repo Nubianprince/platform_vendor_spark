@@ -3,6 +3,8 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 $(call inherit-product, vendor/spark/config/bootanimation.mk)
 $(call inherit-product, vendor/addons/config.mk)
 $(call inherit-product-if-exists, vendor/spark/audio/audio.mk)
+$(call inherit-product, vendor/pixel-framework/config.mk)
+
 
 PRODUCT_BRAND ?= Spark
 
