@@ -168,7 +168,7 @@ endif
 
 ifeq ($(WITH_GAPPS), true)
 # GApps
-$(call inherit-product, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/gms/setup.mk)
 include vendor/gms/products/board.mk
 endif
 
